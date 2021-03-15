@@ -9,7 +9,7 @@ const { getHashPrefix } = require('./hash_prefix')
 
 function getURL(env) {
   switch (env) {
-    case 'staging': return 'https://rewards.bravesoftware.com/publishers/prefix-list';
+    case 'staging': return 'https://rewards-stg.bravesoftware.com/publishers/prefix-list';
     case 'prod': return 'https://rewards.brave.com/publishers/prefix-list'
   }
   throw new Error(`Invalid environment string: ${env}`);

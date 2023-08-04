@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+import crypto from 'crypto';
 
 function getHashPrefix(publisherID, size = 4) {
   let hash = crypto.createHash('sha256');
@@ -6,4 +6,4 @@ function getHashPrefix(publisherID, size = 4) {
   return hash.digest().slice(0, size).toString('hex');
 }
 
-module.exports = { getHashPrefix };
+export { getHashPrefix };

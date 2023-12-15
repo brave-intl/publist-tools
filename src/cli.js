@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const util = require('util');
+import util from 'util';
 
-const { fetchChannel } = require('./channel_reader');
-const { fetchPrefixList } = require('./prefix_list_reader');
-const { getHashPrefix } = require('./hash_prefix');
+import { fetchChannel } from './channel_reader.js';
+import { fetchPrefixList } from './prefix_list_reader.js';
+import { getHashPrefix } from './hash_prefix.js';
 
 const help = `
 publist-tools

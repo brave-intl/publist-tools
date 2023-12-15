@@ -1,11 +1,15 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const protobuf = require('protobufjs');
-const brotli = require('brotli');
-const fetch = require('node-fetch');
+import protobuf from 'protobufjs';
+import brotli from 'brotli';
+import fetch from 'node-fetch';
 
-const { getHashPrefix } = require('./hash_prefix')
+import { getHashPrefix } from './hash_prefix.js'
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function getURL(env) {
   switch (env) {
@@ -84,4 +88,4 @@ async function readPrefixList(content, url = '') {
   };
 }
 
-module.exports = { fetchPrefixList, readPrefixFile, readPrefixList };
+export { fetchPrefixList, readPrefixFile, readPrefixList };
